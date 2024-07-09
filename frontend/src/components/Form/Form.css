@@ -23,6 +23,14 @@
             width: 100%;
         }
     }
+    .input-control-two{
+        input{
+            width: 100%;
+        }
+        display: flex;
+        gap:40px
+    }
+    
 }
     .selects{
         display: flex;
