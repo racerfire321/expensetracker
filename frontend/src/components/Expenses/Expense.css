@@ -1,8 +1,11 @@
 .main_container{
     display: flex;
 overflow: auto;
+ background-image: url('../../img/bg.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
 }
-.total-income{
+.total-expense{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,13 +20,16 @@ overflow: auto;
     span{
         font-size: 2.5rem;
         font-weight: 800;
-        color: var(--color-green);
+        color: var(--color-delete);
     }
 }
 .income-content{
     display: flex;
     gap: 2rem;
+    
     .incomes{
         flex: 1;
+        
+    
     }
 }

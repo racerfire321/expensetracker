@@ -37,7 +37,7 @@ function ExpenseForm() {
     }
 
     return (
-        <form className='main_container' onSubmit={handleSubmit}>
+        <form className='main_formcontainer' onSubmit={handleSubmit}>
             {error && <p className='error'>{error}</p>}
             <div className="input-control">
                 <input 

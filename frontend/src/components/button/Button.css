@@ -11,7 +11,8 @@
 
 /* Customizable styles */
 .button {
-    background-color: var(--bg-color, #ffffff);
+    /* background-color: var(--bg-color, #ffffff); */
+    background-color: rgb(10, 132, 107);
     padding: var(--button-padding, 10px);
     border-radius: var(--border-radius, 5px);
     color: var(--button-color, #000000);

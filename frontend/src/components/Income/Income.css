@@ -22,9 +22,40 @@
     }
     .income-content{
         display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
         gap: 2rem;
+    }
+
+    .items-header{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10px;
     }
         .incomes{
             flex: 1;
         }
+
+
+    .form-container{
+        flex-grow:1;
+    }
+    .btn-con{
+        margin-top: 10px;
+    }
+/* In Income.css or App.css */
+.success-message {
+    color: green;
+    font-weight: bold;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
     

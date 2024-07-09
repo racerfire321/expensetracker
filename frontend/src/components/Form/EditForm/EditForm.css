@@ -1,0 +1,47 @@
+/* EditForm.css */
+
+.editform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: auto;
+}
+
+.editform label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.editform input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.editform button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.editform button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+}
+
+.editform button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.editform button:hover {
+    opacity: 0.8;
+}

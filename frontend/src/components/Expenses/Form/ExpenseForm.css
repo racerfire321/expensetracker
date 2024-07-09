@@ -1,4 +1,4 @@
-.main_container{
+.main_formcontainer{
     display: flex;
 flex-direction: column;
 gap: 2rem;
