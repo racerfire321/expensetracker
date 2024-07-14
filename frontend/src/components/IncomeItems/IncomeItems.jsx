@@ -4,7 +4,7 @@ import './IncomeItem.css';
 import { bitcoin, book, calender, card, circle, clothing, comment, dollar, edit, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icon';
 import Button from '../button/Button';
 
-import EditForm from '../Form/EditForm/Form'; // Import the new EditExpenseForm component
+import EditForm from '../Form/EditForm/Form'; 
 
 function IncomeItem({
     id,
