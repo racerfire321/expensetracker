@@ -8,13 +8,13 @@ import Expenses from './Components/Expenses/Expenses';
 import { useGlobalContext } from './context/GlobalContext';
 import Navbar from './Components/NavBar/Navbar'
 import Transaction from './Components/Transaction/Transaction ';
-import Login from './Components/login/login';
+
 
 function App() {
   const [active, setActive] = useState(1)
 
   const global = useGlobalContext()
-  console.log(global);
+ 
 
   const displayData = () => {
     switch(active){

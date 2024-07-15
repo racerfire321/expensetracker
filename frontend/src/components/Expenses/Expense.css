@@ -1,6 +1,6 @@
 .main_container{
-    display: flex;
-overflow: auto;
+ display: flex;
+ overflow: auto;
  background-image: url('../../img/bg.jpg');
  background-repeat: no-repeat;
  background-size: cover;

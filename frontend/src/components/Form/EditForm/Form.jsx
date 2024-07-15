@@ -26,7 +26,6 @@ const EditForm = ({ id, title, amount, date, category, description, onCancel, is
             } else {
                 await editExpense(id, updatedData);
             }
-            console.log('Edit successful:', updatedData);
         } catch (error) {
             console.error('Error during edit:', error);
         }

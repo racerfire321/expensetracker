@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Income.css';
 import '../../App.css';
 import { useGlobalContext } from '../../context/GlobalContext';
-
 import Form from '../Form/Form';
 import IncomeItem from '../IncomeItems/IncomeItems';
 
@@ -59,4 +58,3 @@ function Income() {
 }
 
 export default Income;
-
