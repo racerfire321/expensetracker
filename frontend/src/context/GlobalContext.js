@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import axios from 'axios';
 
-
+const BASE_URL = "http://localhost:5000/api/v1/";
 
 const GlobalContext = React.createContext();
 
@@ -11,7 +11,7 @@ export const GlobalProvider = ({children}) => {
     const [error, setError] = useState(null);
 
     const addIncome = async (income) => {
-        const response = await axios.post(`${process.env.BASE_URL}add-income`, income)
+        const response = await axios.post(`${BASE_URL}add-income`, income)
             .catch((err) =>{
                 setError(err.response.data.message);
             });
@@ -21,6 +21,7 @@ export const GlobalProvider = ({children}) => {
     const getIncomes = async () => {
         const response = await axios.get(`${BASE_URL}get-incomes`);
         setIncomes(response.data);
+        console.log(response.data);
     };
 
     const deleteIncome = async (id) => {
@@ -29,12 +30,14 @@ export const GlobalProvider = ({children}) => {
     };
 
     const editIncome = async (id, updatedIncome) => {
+        console.log(id , updatedIncome);
         try {
             const res = await axios.put(`${BASE_URL}edit/${id}`, updatedIncome, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
+            console.log(res.data); // Check the response
             getIncomes();
         } catch (err) {
             setError(err.response.data.message);
@@ -52,7 +55,7 @@ export const GlobalProvider = ({children}) => {
     const getExpenses = async () => {
         const response = await axios.get(`${BASE_URL}get-expenses`);
         setExpenses(response.data);
-    
+        console.log(response.data);
     };
 
     const deleteExpense = async (id) => {
@@ -61,13 +64,14 @@ export const GlobalProvider = ({children}) => {
     };
 
     const editExpense = async (id, updatedExpense) => {
+        console.log(id , updatedExpense);
         try {
             const res = await axios.put(`${BASE_URL}editExpense/${id}`, updatedExpense, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            
+            console.log(res.data); // Check the response
             getExpenses();
         } catch (err) {
             setError(err.response.data.message);
@@ -138,3 +142,4 @@ export const GlobalProvider = ({children}) => {
 export const useGlobalContext = () => {
     return useContext(GlobalContext);
 };
+
