@@ -8,7 +8,6 @@ function Transaction() {
   const [search, setSearch] = useState('');
   const [filterType, setFilterType] = useState('all');
   const [sortOrder, setSortOrder] = useState('asc'); 
- console.log(viewHistory);
   const history = viewHistory();
 
 

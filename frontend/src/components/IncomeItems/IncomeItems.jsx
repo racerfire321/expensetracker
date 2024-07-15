@@ -74,8 +74,6 @@ function IncomeItem({
     };
 
     const handleSaveEdit = (id,updatedExpense) => {
-        // Logic to save the updated expense
-        console.log( id ,updatedExpense);
         setIsEditing(false);
     };
 

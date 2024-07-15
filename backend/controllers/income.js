@@ -26,7 +26,7 @@ exports.addIncome = async (req, res) => {
         res.status(500).json({message: 'Server Error'})
     }
 
-    console.log(income)
+    
 }
 
 exports.getIncomes = async (req, res) =>{
@@ -52,7 +52,7 @@ exports.deleteIncome = async (req, res) =>{
 exports.editIncome = async (req, res) => {
     const { id } = req.params; 
     const { title, amount, category, description, date } = req.body; 
-    console.log(title)
+   
     try {
         
         if (!title || !amount || !description ) {
@@ -74,7 +74,7 @@ exports.editIncome = async (req, res) => {
         }
 
         res.status(200).json({ message: 'Income Updated', income: updatedIncome });
-        console.log("yes")
+       
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server Error' });

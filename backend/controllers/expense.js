@@ -25,8 +25,6 @@ exports.addExpense = async (req, res) => {
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
     }
-
-    console.log(income)
 }
 
 exports.getExpense = async (req, res) =>{
@@ -52,8 +50,7 @@ exports.deleteExpense = async (req, res) =>{
 
 exports.editExpense = async (req, res) => {
     const { id } = req.params; 
-    const { title, amount,  description, date } = req.body; 
-    console.log(title)
+    const { title, amount,  description, date } = req.body;
     try {
         
         if (!title || !amount || !description ) {
@@ -75,7 +72,6 @@ exports.editExpense = async (req, res) => {
         }
 
         res.status(200).json({ message: 'expense Updated', expense: updatedExpense });
-        console.log("yes")
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server Error' });
